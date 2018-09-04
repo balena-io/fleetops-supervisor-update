@@ -1,6 +1,6 @@
 ## Overview
 
-We'll send a script to opendoor devices over SSH that will:
+We'll send a script to devices over SSH that will:
 
 1. Download rdiff.xz using resumable curl and retry logic
 2. Download the appropriate compressed delta using resumable curl and retry logic
@@ -15,7 +15,7 @@ We'll send a script to opendoor devices over SSH that will:
 ### checksums.txt
 
 This file contains the result of `docker save <supervisor_image> | sha256sum`
-for each of the supervisor versions that exist in Opendoor's fleet. This should
+for each of the supervisor versions that exist in a specific fleet. This should
 be used on the device to verify that we have the correct base before proceeding
 to apply the diffs
 
