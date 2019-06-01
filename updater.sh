@@ -21,7 +21,7 @@ setup_logfile() {
     exec 1>> "$LOGFILE" 2>&1
 }
 
-stop_upervisor() {
+stop_supervisor() {
     systemctl stop resin-supervisor || true
     docker rm -f resin_supervisor || true
     systemctl stop update-resin-supervisor.timer || true
@@ -144,7 +144,7 @@ main() {
 
     ../rdiff patch delta-base "../${delta_name}" "../${TARGET_VERSION}.tar"
 
-    stop_upervisor
+    stop_supervisor
 
     echo "Docker load"
     docker load -i "../${TARGET_VERSION}.tar" || finish_up "Docker load error"
