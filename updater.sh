@@ -96,6 +96,10 @@ main() {
     # load supervisor version: SUPERVISOR_TAG, SUPERVISOR_IMAGE variables
     # shellcheck disable=SC1091
     source /etc/resin-supervisor/supervisor.conf
+    if [ "${SUPERVISOR_TAG}" = "${TARGET_VERSION}" ]; then
+        echo "Already updated to ${TARGET_VERSION}, nothing to do."
+        finish_up
+    fi
     delta_name="${SUPERVISOR_TAG}-${TARGET_VERSION}.delta"
     delta_url="${URLBASE}/deltas/${delta_name}.xz"
     echo "Delta URL: ${delta_url}"
