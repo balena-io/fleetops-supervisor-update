@@ -6,7 +6,8 @@ set -o errexit -o pipefail
 # shellcheck disable=SC1091
 source /etc/profile
 
-URLBASE="https://misc1.dev.balena.io/~imrehg/fleetops-od-supervisor"
+# Linking to a specific git commit sha to always be sure what version of the files are pulled
+URLBASE="https://raw.githubusercontent.com/balena-io-playground/fleetops-supervisor-update/c29ddcc98d975ca0130de03237e03bb67c4f0199"
 DOWNLOADS=(xzdec.gz rdiff.xz checksums.txt)
 TARGET_VERSION="v6.6.11_logstream"
 
