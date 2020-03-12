@@ -1,0 +1,19 @@
+{
+  "name": "fleetops-supervisor-update",
+  "version": "0.0.1",
+  "description": "We'll send a script to devices over SSH that will:",
+  "main": "run.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balena-io-playground/fleetops-supervisor-update.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balena-io-playground/fleetops-supervisor-update/issues"
+  },
+  "homepage": "https://github.com/balena-io-playground/fleetops-supervisor-update#readme"
+}
