@@ -1,6 +1,6 @@
 {
   "name": "fleetops-supervisor-update",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "We'll send a script to devices over SSH that will:",
   "main": "run.sh",
   "scripts": {
